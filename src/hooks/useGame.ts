@@ -13,12 +13,12 @@ export interface Game {
   name: string;
   background_image: string;
   parent_platforms: { platform: Platform }[];
+  metacritic: number;
 }
 
 interface FetchGamesResponse {
-  results: SetStateAction<Game[]>;
   count: number;
-  result: Game[];
+  results: Game[];
 }
 
 const useGames = () => {
